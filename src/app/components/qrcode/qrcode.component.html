@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="input">
+        <input (input)="code($event)" type="text" class="form-control" placeholder="">
+    </div>
+    <div class="qr">
+        <qr-code #parent [value]="this.url" [size]="200"></qr-code>
+    </div>
+    <div class="btn">
+        <button class="btn btn-primary" (click)="downloadqr(parent)">Download</button>
+    </div>
+</div>
